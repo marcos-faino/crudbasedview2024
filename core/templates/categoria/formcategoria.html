@@ -5,7 +5,9 @@
 
 {% block conteudo %}
 <div class="row">
-    <h2 class="col-12">Cadastro de Categorias</h2>
+    <h2 class="col-12">
+        {% if categoria %}Atualização{% else %}Cadastro{% endif %} de Categorias
+    </h2>
     <div class="col-12">
         <form method="POST">
             {% bootstrap_form form %}

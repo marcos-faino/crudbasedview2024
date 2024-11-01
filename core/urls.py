@@ -8,4 +8,8 @@ urlpatterns = [
          name='addCategoria'),
     path('listar/categorias', views.CategoriaListView.as_view(),
          name='listarCategorias'),
+    path('atualizar/categoria/<int:pk>', views.CategoriaUpdateView.as_view(),
+         name='atualizaCategoria'),
+    path('excluir/categoria/<int:pk>', views.CategoriaDeleteView.as_view(),
+         name='excluiCategoria'),
 ]
